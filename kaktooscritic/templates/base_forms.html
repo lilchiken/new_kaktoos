@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  {% load static %}
+<!--  icons and href url index  -->
+  <meta charset="utf-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+  <link rel="icon"
+        href=""
+        type="image">
+  <link rel="apple-touch-icon"
+        sizes="180x180"
+        href="">
+  <link rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="">
+  <link rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="">
+  <meta name="msapplication-TileColor"
+        content="#000">
+  <meta name="theme-color"
+        content="#ffffff">
+  <link rel="stylesheet"
+        href="{% static 'verb/css/bootstrap.css' %}">
+  {% include 'includes/scripts.html' %}
+  </head>
+  <body>
+  <div class="gtco-loader"></div>
+  <div id="page">
+  {% include 'includes/header.html' %}
+  <header id="gtco-header" class="gtco-cover" role="banner" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  </div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeInUp" align="center">
+							{% block content %}
+              {% endblock %}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+  </header>
+  {% include 'includes/footer.html' %}
+  </div>
+  {% include 'includes/backscripts.html' %}
+  </body>
+</html>

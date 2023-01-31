@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}
+  index page
+{% endblock %}
+{% block content %}
+
+  {% for rec in page_obj %}
+  <li class="full entry animate-box" data-animate-effect="fadeIn">
+    <a href="{% url 'recension:single' rec.id %}">
+      <div class="entry-img"></div>
+      <div class="entry-desc">
+        <h1>{{ rec.film.title }}</h1>
+        <h3>{{ rec.small_text }}</h3>
+      </div>
+    </a>
+    <a class="post-meta">
+      <span class="date-posted">
+        {{ rec.film.genre.first }}
+      </span>
+      <p>{{ rec.pub_date }}</p>
+    </a>
+  </li>
+  {% endfor %}
+{% endblock %}

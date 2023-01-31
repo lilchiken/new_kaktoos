@@ -1,0 +1,26 @@
+<nav class="gtco-nav" role="navigation">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-2 text-left">
+				<div id="gtco-logo"><a href="{% url 'recension:main' %}">Kaktoos<span>critic</span></a></div>
+			</div>
+			<div class="col-xs-10 text-right menu-1">
+				<ul>
+					<li><a href="">Афиша</a></li>
+					<li><a href="{% url 'recension:main' %}">Рецензии</a></li>
+					{% if user.is_authenticated %}
+						<li><a href="">Выйти</a></li>
+					{% else %}
+						<li class="has-dropdown">
+							<a href="">Аккаунт</a>
+							<ul class="dropdown">
+								<li><a href="">Войти</a></li>
+								<li><a href="">Регистрация</a></li>
+							</ul>
+						</li>
+					{% endif %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>

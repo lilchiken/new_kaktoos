@@ -1,0 +1,26 @@
+<header id="gtco-header" class="gtco-cover" role="banner" data-stellar-background-ratio="0.5">
+  <div class="overlay">
+  </div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-7 text-left">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeInUp">
+							<span class="date-post">
+								{{ last_rec_pub_date }}
+							</span>
+							<h1 class="mb30"><a href="{% url 'recension:single' last_rec_id %}">
+								{{ last_rec_film_title }}
+							</a></h1>
+							<h3 class="mb10"><a href="">
+								{{ last_rec_small_text }}
+							</a></h3>
+							<p><a href="" class="text-link">
+								Ссылка на рецензию
+							</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+</header>
